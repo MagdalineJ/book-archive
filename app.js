@@ -5,9 +5,6 @@ displayCtrl('error','none')
 displayCtrl('footer','none')
 displayCtrl('spinner','none')
 
-// document.getElementById('error').style.display="none";
-// document.getElementById('footer').style.display="none";
-// document.getElementById('spinner').style.display="none";
 // fetching the data from open library
 const searchBooks =()=>{
      document.getElementById('spinner').style.display="block";
@@ -25,14 +22,9 @@ const searchBooks =()=>{
 
 
 }else{
-
-  // document.getElementById('dashboard').style.display='none';
-  // document.getElementById('footer').style.display='none';
-
   errorMsg();
   displayCtrl('dashboard','none')
   displayCtrl('footer','none')
-
 }}
 // calling the dashboard functions to display
 const allData=(data)=>{
@@ -43,9 +35,6 @@ const allData=(data)=>{
 // sorting out the display data
 const displayBooks =(data)=>{
    
-    // document.getElementById('dashboard').style.display='flex';
-    // document.getElementById('error').style.display="none";
-    //   document.getElementById('spinner').style.display="none";
       displayCtrl('dashboard','flex')
       displayCtrl('error','none')
       displayCtrl('spinner','none')
@@ -82,17 +71,14 @@ document.getElementById('displaycount').innerText=`${books.length}`;
 }
 // footer section 
 const numfound=(data)=>{
-  // document.getElementById('footer').style.display="block";
+  
   displayCtrl('footer','block')
   document.getElementById('numfound').innerText=`${data.numFound}`;
-  
-   }
+}
 // error handling
 const errorMsg=()=>{
 displayCtrl('error','block')
 displayCtrl('spinner','none')
-// document.getElementById('error').style.display="block";
-// document.getElementById('spinner').style.display="none";
 }
 
 
